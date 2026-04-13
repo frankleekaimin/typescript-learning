@@ -1,0 +1,17 @@
+# TypeScript Learning — Progress Tracker
+
+| # | Topic | Status | Date Completed | Notes |
+|---|-------|--------|----------------|-------|
+| 01 | [Variables, Primitives & Type Annotations](topics/01-variables-primitives-annotations/) | In Progress | | |
+| 02 | [Arrays & Tuples](topics/02-arrays-tuples/) | Not Started | | |
+| 03 | [Objects & Type Aliases](topics/03-objects-type-aliases/) | Not Started | | |
+| 04 | [Functions](topics/04-functions/) | Not Started | | |
+| 05 | [Union & Intersection Types](topics/05-union-intersection/) | Not Started | | |
+| 06 | [Literal Types & Type Narrowing](topics/06-literal-types-narrowing/) | Not Started | | |
+| 07 | [Interfaces](topics/07-interfaces/) | Not Started | | |
+| 08 | [Generics — Basics](topics/08-generics-basics/) | Not Started | | |
+| 09 | [Enums](topics/09-enums/) | Not Started | | |
+| 10 | [Classes & Access Modifiers](topics/10-classes/) | Not Started | | |
+| 11 | [Type Assertions & `unknown`](topics/11-type-assertions-unknown/) | Not Started | | |
+| 12 | [Utility Types](topics/12-utility-types/) | Not Started | | |
+| 13 | [Modules — import / export](topics/13-modules/) | Not Started | | |
