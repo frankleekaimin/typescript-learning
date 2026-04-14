@@ -126,17 +126,17 @@ config[0] = "dev";    // ERROR
 
 ## 5. Common array methods and their types
 
-| Method | Signature | Returns |
-|--------|-----------|---------|
-| `push(...items)` | Add to end | `number` (new length) |
-| `pop()` | Remove last | `T \| undefined` |
-| `shift()` | Remove first | `T \| undefined` |
-| `unshift(...items)` | Add to start | `number` (new length) |
-| `map(fn)` | Transform each | `Array<U>` (new array) |
-| `filter(fn)` | Keep matching | `Array<T>` (filtered array) |
-| `find(fn)` | First match | `T \| undefined` |
-| `some(fn)` | Any match? | `boolean` |
-| `every(fn)` | All match? | `boolean` |
+| Method | Signature | Returns | Mutating? |
+|--------|-----------|---------|-----------|
+| `push(...items)` | Add to end | `number` (new length) | ✅ Yes |
+| `pop()` | Remove last | `T \| undefined` | ✅ Yes |
+| `shift()` | Remove first | `T \| undefined` | ✅ Yes |
+| `unshift(...items)` | Add to start | `number` (new length) | ✅ Yes |
+| `map(fn)` | Transform each | `Array<U>` (new array) | ❌ No |
+| `filter(fn)` | Keep matching | `Array<T>` (filtered array) | ❌ No |
+| `find(fn)` | First match | `T \| undefined` | ❌ No |
+| `some(fn)` | Any match? | `boolean` | ❌ No |
+| `every(fn)` | All match? | `boolean` | ❌ No |
 
 Example:
 
