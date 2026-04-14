@@ -14,12 +14,21 @@
 // Exercise 1
 // Create an object with properties: name (string), age (number), city (string)
 // Let TypeScript infer the type (no annotation needed).
-// TODO
+let user = {
+    name: "Frank",
+    age: 30,
+    isActive: true
+}
 
 // Exercise 2
 // What type does TypeScript infer for this object? Write the inferred type as a comment.
 const product = { title: "Laptop", price: 1200, inStock: true };
-// Inferred type: // TODO
+// Inferred type: 
+// {
+//     title: string;
+//     price: number;
+//     inStock: boolean;
+// }
 
 // ─────────────────────────────────────────────
 // SECTION B — Explicit object type annotations
@@ -28,12 +37,16 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // Exercise 3
 // Declare an object with an explicit inline type annotation.
 // Properties: id (number), email (string), verified (boolean)
-// TODO
+type aUser = {
+    id: number;
+    email: string;
+    verified: boolean;
+}
 
 // Exercise 4
 // Fix this annotation — there's a syntax error. (Hint: use semicolons or commas to separate.)
 // let config: { host: string, port: number } = { host: "localhost", port: 3000 };
-// TODO
+let config: { host: string; port: number } = { host: "localhost", port: 3000 };
 
 // ─────────────────────────────────────────────
 // SECTION C — Type aliases (type keyword)
@@ -44,22 +57,30 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // - title (string)
 // - author (string)
 // - pages (number)
-// TODO
+type Book = {
+    title: string;
+    author: string;
+    pages: number;
+}
 
 // Exercise 6
 // Use the `Book` type alias to create a variable.
-// TODO
+let story: Book;
 
 // Exercise 7
 // Define a type alias `Point` with:
 // - x (number)
 // - y (number)
 // Then create a Point object.
-// TODO
+type Point = {
+    x: number;
+    y: number;
+}
+let Point1: Point;
 
 // Exercise 8
 // Create TWO different Point objects using the same type alias.
-// TODO
+let Point2:Point;
 
 // ─────────────────────────────────────────────
 // SECTION D — Optional properties with `?`
@@ -70,20 +91,24 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // - name (string)
 // - age (number)
 // - phone (string, OPTIONAL)
-// TODO
+type Person = {
+    name: string;
+    age: number;
+    phone?: string;
+}
 
 // Exercise 10
 // Create a Person object WITHOUT the phone property.
-// TODO
+let Alan: Person = {name: "Alan", age: 30}
 
 // Exercise 11
 // Create a Person object WITH the phone property.
-// TODO
+let Ben: Person = {name: "Ben", age: 30, phone: "12345678"}
 
 // Exercise 12
 // What type does the `phone` property have when it's optional?
 // Write your answer as a comment.
-// Answer: // TODO
+// Answer: undefined
 
 // ─────────────────────────────────────────────
 // SECTION E — Readonly properties
@@ -93,12 +118,16 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // Define a type `Secret` with readonly properties:
 // - apiKey (string, readonly)
 // - token (string, readonly)
-// TODO
+type Secret = {
+    readonly apiKey: string;
+    readonly token: string
+}
 
 // Exercise 14
 // Create a Secret object. Can you reassign a readonly property?
 // Try to change apiKey and see what TypeScript says.
-// TODO
+let shh:Secret = {apiKey: "a", token: "b"};
+//shh["apiKey"] = "c"; // Returns "Cannot assign to 'apiKey' because it is a read-only property"
 
 // ─────────────────────────────────────────────
 // SECTION F — Nested objects
@@ -109,22 +138,36 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // - street (string)
 // - city (string)
 // - zipCode (string)
-// TODO
+type Address = {
+    street: string;
+    city: string;
+    zipcode: string;
+}
 
 // Exercise 16
 // Define a type `User` with:
 // - name (string)
 // - address (Address type from Exercise 15)
-// TODO
+type User = {
+    name: string;
+    address: Address;
+}
 
 // Exercise 17
 // Create a User object with a nested Address object.
-// TODO
+let Charlie:User = {
+    name: "Charlie",
+    address: {
+    street: "123 Main St",
+    city: "Singapore",
+    zipcode: "123456"
+    }
+}
 
 // Exercise 18
 // Access the city property of the nested address.
 // (Use the user object from Exercise 17.)
-// TODO
+console.log(Charlie.address.city);
 
 // ─────────────────────────────────────────────
 // SECTION G — Union types for properties
@@ -134,15 +177,18 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // Define a type `ApiResponse` with:
 // - statusCode (number)
 // - data (string OR number) — union of string and number
-// TODO
+type ApiResponse = {
+    statusCode: number,
+    data: string|number;
+}
 
 // Exercise 20
 // Create an ApiResponse with statusCode: 200 and string data.
-// TODO
+let response: ApiResponse = {statusCode: 200, data: "OK"}
 
 // Exercise 21
 // Create an ApiResponse with statusCode: 404 and number data.
-// TODO
+let response2: ApiResponse = {statusCode: 404, data: 1}
 
 // ─────────────────────────────────────────────
 // SECTION H — Intersection types with `&`
@@ -151,17 +197,17 @@ const product = { title: "Laptop", price: 1200, inStock: true };
 // Exercise 22
 // Define a type `HasId` with:
 // - id (number)
-// TODO
+type HasId = {id: number}
 
 // Exercise 23
 // Define a type `HasName` with:
 // - name (string)
-// TODO
+type HasName = {name: string}
 
 // Exercise 24
 // Create a type alias `Entity` that combines HasId & HasName.
-// TODO
+type Entity = HasId & HasName;
 
 // Exercise 25
 // Create an Entity object with both id and name properties.
-// TODO
+let Dennis: Entity = {id: 123, name: "Dennis"}

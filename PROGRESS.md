@@ -4,8 +4,8 @@
 |---|-------|--------|----------------|-------|
 | 01 | [Variables, Primitives & Type Annotations](topics/01-variables-primitives-annotations/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
 | 02 | [Arrays & Tuples](topics/02-arrays-tuples/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
-| 03 | [Objects & Type Aliases](topics/03-objects-type-aliases/) | In Progress | | |
-| 04 | [Functions](topics/04-functions/) | Not Started | | |
+| 03 | [Objects & Type Aliases](topics/03-objects-type-aliases/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
+| 04 | [Functions](topics/04-functions/) | In Progress | | |
 | 05 | [Union & Intersection Types](topics/05-union-intersection/) | Not Started | | |
 | 06 | [Literal Types & Type Narrowing](topics/06-literal-types-narrowing/) | Not Started | | |
 | 07 | [Interfaces](topics/07-interfaces/) | Not Started | | |
