@@ -2,7 +2,7 @@
 
 | # | Topic | Status | Date Completed | Notes |
 |---|-------|--------|----------------|-------|
-| 01 | [Variables, Primitives & Type Annotations](topics/01-variables-primitives-annotations/) | In Progress | | |
+| 01 | [Variables, Primitives & Type Annotations](topics/01-variables-primitives-annotations/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
 | 02 | [Arrays & Tuples](topics/02-arrays-tuples/) | Not Started | | |
 | 03 | [Objects & Type Aliases](topics/03-objects-type-aliases/) | Not Started | | |
 | 04 | [Functions](topics/04-functions/) | Not Started | | |

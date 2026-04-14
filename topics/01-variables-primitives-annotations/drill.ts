@@ -19,16 +19,17 @@ const language = "TypeScript"; // example answer hidden — write your own above
 // Exercise 2
 // Declare a variable called `score` that starts at 0 and can be reassigned later.
 // TODO
+let score = 0;
 
 // Exercise 3
 // The line below will cause a compile error. Fix it by changing ONE keyword.
-var city = "Taipei";   // TODO: replace `var` with the correct keyword
+let city = "Taipei";   // TODO: replace `var` with the correct keyword
 city = "Kaohsiung";
 
 // Exercise 4
 // Identify the error: why does this fail?  Fix it without changing the value.
-// const pi = 3.14;
-// pi = 3.14159;  // TODO: uncomment both lines and fix the declaration
+let pi = 3.14;
+pi = 3.14159;  // TODO: uncomment both lines and fix the declaration
 
 // ─────────────────────────────────────────────
 // SECTION B — Primitive type annotations
@@ -36,28 +37,28 @@ city = "Kaohsiung";
 
 // Exercise 5
 // Annotate `username` as a string.
-let username /* TODO: add annotation here */ = "frank";
+let username: string = "frank";
 
 // Exercise 6
 // Annotate `age` as a number.
-let age /* TODO */ = 28;
+let age: number = 28;
 
 // Exercise 7
 // Annotate `isActive` as a boolean.
-let isActive /* TODO */ = true;
+let isActive: boolean = true;
 
 // Exercise 8
 // Declare a variable `greeting` of type string WITHOUT giving it an initial value.
 // (An annotation is required here — TypeScript cannot infer from nothing.)
-// TODO
+let greeting: string;
 
 // Exercise 9
 // Declare a variable `maxItems` of type number WITHOUT giving it an initial value.
-// TODO
+let maxItems: number;
 
 // Exercise 10
 // Which annotation is missing? Fix the line so TypeScript knows the type.
-let label /* TODO */;
+let label: string;
 label = "hello";
 
 // ─────────────────────────────────────────────
@@ -66,22 +67,22 @@ label = "hello";
 
 // Exercise 11
 // Remove the redundant annotation — TypeScript can infer this type on its own.
-let product: string = "laptop";   // TODO: remove the `: string`
+let product = "laptop";   // TODO: remove the `: string`
 
 // Exercise 12
 // Remove the redundant annotation.
-let quantity: number = 5;   // TODO: remove the `: number`
+let quantity = 5;   // TODO: remove the `: number`
 
 // Exercise 13
 // Remove the redundant annotation.
-let isAvailable: boolean = false;   // TODO: remove the `: boolean`
+let isAvailable = false;   // TODO: remove the `: boolean`
 
 // Exercise 14
 // TypeScript infers the type from the right-hand side.
 // Without adding an annotation, what type does TypeScript assign to `result`?
 // Write your answer as a comment below.
 const result = 10 + 5;
-// Answer: TODO
+// Answer: number
 
 // ─────────────────────────────────────────────
 // SECTION D — Avoiding `any`
@@ -89,22 +90,22 @@ const result = 10 + 5;
 
 // Exercise 15
 // The annotation below uses `any`. Replace it with the correct primitive type.
-let playerName: any = "Alex";   // TODO: fix the annotation
+let playerName: string = "Alex";   // TODO: fix the annotation
 
 // Exercise 16
 // Same problem — replace `any` with the right type.
-let level: any = 1;   // TODO: fix the annotation
+let level: number = 1;   // TODO: fix the annotation
 
 // Exercise 17
 // This function parameter is typed as `any`.
 // Change the annotation so it only accepts strings.
-function greet(name: any): string {   // TODO: fix the parameter type
+function greet(name: string): string {   // TODO: fix the parameter type
   return "Hello, " + name;
 }
 
 // Exercise 18
 // Explain in a comment: why is `any` dangerous?
-// TODO (your explanation here)
+// any tells Typescript to stop type-checking the value which might introduce bugs into the code.
 
 // ─────────────────────────────────────────────
 // SECTION E — null and undefined (strictNullChecks)
@@ -113,17 +114,19 @@ function greet(name: any): string {   // TODO: fix the parameter type
 // Exercise 19
 // The assignment below is an error with `strictNullChecks` on.
 // Fix the type annotation so it accepts both string and null.
-let nickname: string = null;   // TODO: fix the annotation
+let nickname: string | null = null;   // TODO: fix the annotation
 
 // Exercise 20
 // Declare `middleName` as either a string or undefined.
-// TODO
+let middleName: string | undefined;
 
 // Exercise 21
 // Write a guard that checks for null before using `title`.
 // Fill in the if-condition so the console.log only runs when title is not null.
-let title: string | null = null;
-if (/* TODO */) {
+// (The cast keeps TypeScript from over-narrowing to `null` at compile time —
+//  in real code this value would arrive from an API or user input.)
+let title: string | null = null as string | null;
+if (title !== null) {
   console.log(title.toUpperCase());
 }
 
@@ -133,16 +136,16 @@ if (/* TODO */) {
 
 // Exercise 22
 // What does `typeof 42` return?  Write your answer as a string literal below.
-const typeOfNumber: string = /* TODO */ "";
+const typeOfNumber: string = /* TODO */ "number";
 
 // Exercise 23
 // What does `typeof "hello"` return?
-const typeOfString: string = /* TODO */ "";
+const typeOfString: string = /* TODO */ "string";
 
 // Exercise 24
 // Fill in the typeof check so the function only logs when value is a number.
 function logIfNumber(value: unknown): void {
-  if (typeof value === /* TODO */ "") {
+  if (typeof value === /* TODO */ "number") {
     console.log("Number:", value);
   }
 }
@@ -151,3 +154,4 @@ function logIfNumber(value: unknown): void {
 // Famous JS quirk — what does `typeof null` return?
 // Write your answer as a comment and explain why it is surprising.
 // TODO
+// "object". It is surprising because you would expect the result to be null or undefined instead.
