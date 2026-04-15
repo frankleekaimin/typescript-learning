@@ -13,20 +13,26 @@
 
 // Exercise 1
 // Declare a function `add` that takes two numbers and returns their sum.
-// TODO
+function add(a: number, b: number): number {
+    return a + b
+}
 
 // Exercise 2
 // Declare a function `greet` that takes a name (string) and returns a greeting string.
-// TODO
+function greet(name: string): string {
+    return "Hello, " + name;
+}
 
 // Exercise 3
 // Declare a function `isEven` that takes a number and returns a boolean.
-// TODO
+function isEven(num: number): boolean {
+    return num % 2 === 0;
+}
 
 // Exercise 4
 // What would be the return type of this function?
 // function getValue(): ??? { return 42; }
-// Answer: // TODO
+// Answer: number
 
 // ─────────────────────────────────────────────
 // SECTION B — Arrow functions
@@ -34,16 +40,18 @@
 
 // Exercise 5
 // Rewrite the add function as an arrow function.
-// TODO
+const add2 = (a:number, b: number): number => {
+    return a + b;
+};
 
 // Exercise 6
 // Create an arrow function `double` that takes a number and returns it doubled.
 // Use the shorthand syntax (one-liner).
-// TODO
+const double = (a:number): number => a * 2;
 
 // Exercise 7
 // Create an arrow function `greetFormal` that takes a name and returns "Good morning, {name}".
-// TODO
+const greetFormal = (name:string) => "Good morning, " + name;
 
 // ─────────────────────────────────────────────
 // SECTION C — Optional parameters
@@ -54,15 +62,20 @@
 // - name (string, required)
 // - age (number, OPTIONAL)
 // Returns a string description. Include age in the description only if provided.
-// TODO
+function describe(name: string, age?: number) {
+    if (age) {
+        return name + ", " + age;
+    }
+    return name;
+}
 
 // Exercise 9
 // Call the describe function with just the name.
-// TODO
+describe("Alan")
 
 // Exercise 10
 // Call the describe function with both name and age.
-// TODO
+describe("Alan",30)
 
 // ─────────────────────────────────────────────
 // SECTION D — Default parameters
@@ -72,15 +85,15 @@
 // Declare a function `welcome` that takes:
 // - name (string, required)
 // - greeting (string, DEFAULT = "Welcome")
-// TODO
+const welcome = (name: string, greeting: string = "Welcome") => greeting + " " + name;
 
 // Exercise 12
 // Call welcome with just the name.
-// TODO
+welcome("Alan")
 
 // Exercise 13
 // Call welcome with a custom greeting.
-// TODO
+welcome("Alan", "Hello")
 
 // ─────────────────────────────────────────────
 // SECTION E — Rest parameters
@@ -89,16 +102,16 @@
 // Exercise 14
 // Declare a function `sumAll` that takes any number of numbers and returns their sum.
 // Use rest parameters (...numbers).
-// TODO
+const sumAll = (...numbers: number[]) => numbers.reduce((a,b) => a+b, 0);
 
 // Exercise 15
 // Call sumAll with several numbers: 1, 2, 3, 4, 5
-// TODO
+sumAll(1,2,3,4,5);
 
 // Exercise 16
 // Declare a function `joinWords` that takes any number of strings and joins them with spaces.
 // Example: joinWords("Hello", "TypeScript", "World") => "Hello TypeScript World"
-// TODO
+const joinWords = (...strings: string[]) => strings.join(" ");
 
 // ─────────────────────────────────────────────
 // SECTION F — Function types
@@ -106,19 +119,19 @@
 
 // Exercise 17
 // Define a function type `Calculator` that takes two numbers and returns a number.
-// TODO
+type Calculator = (a: number, b: number) => number;
 
 // Exercise 18
 // Use the Calculator type from Exercise 17 to declare a multiply function.
-// TODO
+const multiple: Calculator = (a, b) => a * b;
 
 // Exercise 19
 // Define a function type `Logger` that takes a string and returns void.
-// TODO
+type Logger = (s: string) => void;
 
 // Exercise 20
 // Implement a Logger function that logs the message.
-// TODO
+const consolelog: Logger = s => console.log(s);
 
 // ─────────────────────────────────────────────
 // SECTION G — Callbacks
@@ -129,16 +142,22 @@
 // - two numbers (a, b)
 // - a callback of type (number, number) => number
 // Returns the result of applying the callback to a and b.
-// TODO
+function applyOperation (
+    a: number,
+    b: number,
+    callback: (a: number, b: number) => number): number {
+    return callback(a, b)
+}
 
 // Exercise 22
 // Call applyOperation with add as the callback (from Exercise 1).
 // Store the result in a variable.
-// TODO
+let total = applyOperation(3,5,add)
 
 // Exercise 23
 // Call applyOperation with a multiply callback (create it inline).
-// TODO
+const multiply = (a: number, b: number): number => a*b
+let multiple2 = applyOperation(3,5, multiply);
 
 // ─────────────────────────────────────────────
 // SECTION H — Functions returning functions
@@ -149,8 +168,11 @@
 // - takes a factor (number)
 // - returns a function that takes a number and returns number
 // Example: const double = makeMultiplier(2); double(5) => 10
-// TODO
+function makeMultiplier(factor: number): (n: number) => number {
+    return (n) => n * factor;
+}
 
 // Exercise 25
 // Use makeMultiplier to create a `triple` function and call it with 4.
-// TODO
+const triple = makeMultiplier(3)
+console.log(triple(4))
