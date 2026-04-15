@@ -6,8 +6,8 @@
 | 02 | [Arrays & Tuples](topics/02-arrays-tuples/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
 | 03 | [Objects & Type Aliases](topics/03-objects-type-aliases/) | ✅ Complete | 2026-04-14 | All 25 exercises passed |
 | 04 | [Functions](topics/04-functions/) | ✅ Complete | 2026-04-15 | All 25 exercises passed |
-| 05 | [Union & Intersection Types](topics/05-union-intersection/) | In Progress | | |
-| 06 | [Literal Types & Type Narrowing](topics/06-literal-types-narrowing/) | Not Started | | |
+| 05 | [Union & Intersection Types](topics/05-union-intersection/) | ✅ Complete | 2026-04-15 | All 25 exercises passed |
+| 06 | [Literal Types & Type Narrowing](topics/06-literal-types-narrowing/) | In Progress | | |
 | 07 | [Interfaces](topics/07-interfaces/) | Not Started | | |
 | 08 | [Generics — Basics](topics/08-generics-basics/) | Not Started | | |
 | 09 | [Enums](topics/09-enums/) | Not Started | | |

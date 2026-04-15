@@ -63,8 +63,8 @@ function printId(id: string | number): void {
 
 | Technique | Example |
 |-----------|---------|
-| `typeof` check | `typeof value === "string"` |
-| `instanceof` check | `value instanceof Date` |
+| `typeof` check | `typeof value === "string"` — for primitives |
+| `instanceof` check | `value instanceof Date` — for objects/classes |
 | Property check | `"email" in user` |
 | Truthiness | `if (value) { ... }` |
 | Equality | `value === null`, `value !== undefined` |
