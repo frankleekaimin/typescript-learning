@@ -8,8 +8,8 @@
 | 04 | [Functions](topics/04-functions/) | ✅ Complete | 2026-04-15 | All 25 exercises passed |
 | 05 | [Union & Intersection Types](topics/05-union-intersection/) | ✅ Complete | 2026-04-15 | All 25 exercises passed |
 | 06 | [Literal Types & Type Narrowing](topics/06-literal-types-narrowing/) | ✅ Complete | 2026-04-15 | All 25 exercises passed |
-| 07 | [Interfaces](topics/07-interfaces/) | In Progress | | |
-| 08 | [Generics — Basics](topics/08-generics-basics/) | Not Started | | |
+| 07 | [Interfaces](topics/07-interfaces/) | ✅ Complete | 2026-04-16 | All 25 exercises passed |
+| 08 | [Generics — Basics](topics/08-generics-basics/) | In Progress | | |
 | 09 | [Enums](topics/09-enums/) | Not Started | | |
 | 10 | [Classes & Access Modifiers](topics/10-classes/) | Not Started | | |
 | 11 | [Type Assertions & `unknown`](topics/11-type-assertions-unknown/) | Not Started | | |
