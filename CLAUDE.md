@@ -29,3 +29,9 @@
 ## Progress Tracking
 - Always read PROGRESS.md at the start of a session
 - Always update PROGRESS.md at the end of a session
+
+## Code Review Protocol
+- When asked to review drill work: point out every issue clearly — what's wrong, why it's wrong, and what concept it relates to
+- Explain the fix so the user understands it, but let them apply the fix themselves
+- Only fix code directly for purely mechanical issues (e.g. naming conflicts caused by TypeScript's own types, not the user's logic)
+- After the user applies fixes, verify the code compiles and the logic is correct
