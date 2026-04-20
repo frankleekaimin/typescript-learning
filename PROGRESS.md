@@ -14,4 +14,4 @@
 | 10 | [Classes & Access Modifiers](topics/10-classes/) | ✅ Complete | 2026-04-20 | All 25 exercises passed |
 | 11 | [Type Assertions & `unknown`](topics/11-type-assertions-unknown/) | ✅ Complete | 2026-04-20 | All 25 exercises passed |
 | 12 | [Utility Types](topics/12-utility-types/) | ✅ Complete | 2026-04-20 | All 25 exercises passed |
-| 13 | [Modules — import / export](topics/13-modules/) | Not Started | | |
+| 13 | [Modules — import / export](topics/13-modules/) | ✅ Complete | 2026-04-20 | All 25 exercises passed |
