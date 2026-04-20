@@ -129,7 +129,7 @@ console.log(user, id)
 // Log add(1, 2) and greet("World").
 // TODO: import from barrel and log
 import {add as addd, greet} from "./index"
-console.log(add(1, 2))
+console.log(addd(1, 2))
 console.log(greet("World"))
 
 // Exercise 19
